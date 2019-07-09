@@ -13243,19 +13243,6 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[349]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TripOrigin&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;CN&#39;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[329]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -13467,7 +13454,7 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[353]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">analysis</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
@@ -13597,7 +13584,7 @@ Net bookings variation: -1600, cancelling ratio variation: 0.14
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="For-China:">For China:<a class="anchor-link" href="#For-China:">&#182;</a></h2><p>It seems that net bookings decreased by 2015, <strong>with a total of 264 bookings</strong>. It means 133 less bookings compared to 2014. The variation of the cancellation changes in 6 percentage points. 46% of travellers booked their tickets and cancelled them, not very different than the previous year.</p>
 <p>The dataset contains mainly countries from Asia and Oceania. Despite the huge inffluence of the event occured in Paris for all the countries contained in the dataset, <strong>China seems to be less influenced</strong>.</p>
-<h3 id="Why?"><strong>Why?</strong><a class="anchor-link" href="#Why?">&#182;</a></h3><p>As an hypothesis we could think that <strong>the control of news and information performed by the chinese government could made users to be less aware of the supposed risk of travelling to France.</strong></p>
+<h3 id="Why?"><strong>Why?</strong><a class="anchor-link" href="#Why?">&#182;</a></h3><p>As an hypothesis we could think that <strong>the control of news and information performed by the chinese government could made users to be less aware of the supposed risk of travelling to France.</strong> We can check in some cells below that other countries with a wider access to information as Japan and Korea raised their cancellation ratio after the news were spreaded.</p>
 
 </div>
 </div>
@@ -14052,39 +14039,6 @@ Net bookings variation: -1600, cancelling ratio variation: 0.14
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[306]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_by_PaxProfile</span><span class="p">[</span><span class="s1">&#39;total&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[306]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2028</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[279]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -14189,6 +14143,19 @@ Net bookings variation: -1600, cancelling ratio variation: 0.14
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>It makes sense that people <strong>people travelling for holidays (leisure and group profiles) are more prone to cancel than those heading Paris for bussiness (they have to do it) or visiting friends/family</strong> (Fear makes people to come closer to loved ones, no matter the risk)</li>
+</ul>
+<ul>
+<li>This relates with the fact that bookings including more people were cancelled in a higher ratio than those bookings made for single travellers. People travelling for bussinesses use to travel alone, similarly to those doing it for visiting family or friends. The next cell shows it clearly. 86% of Bussiness and 80% of Visit labeled bookings were made for single travellers, whereas just 11% of leisure travellers were booking to fly alone. We excluded group labeled bookings for obvious reasons. </li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14334,15 +14301,8 @@ Name: PaxPerBooking, dtype: float64
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Some-ideas-from-the-dataset-analysis:">Some ideas from the dataset analysis:<a class="anchor-link" href="#Some-ideas-from-the-dataset-analysis:">&#182;</a></h2><ul>
-<li><p>When comparing countries, and just considering those with a remarkable amount of total bookings, Japan and South Korea appear to be the ones with the higher cancellation ratio variation compared to the previous year (27% and 21% increase respectively). As two of the richest economies in Asia, it makes sense they could be more aware of threatening news.</p>
-</li>
-<li><p>It makes sense that people <strong>people travelling for holidays (leisure and group profiles) are more prone to cancel than those heading Paris for bussiness (they have to do it) or visiting friends/family</strong> (Fear makes people to come closer to loved ones, no matter the risk)</p>
-</li>
-<li><p>This relates with the fact that bookings including more people were cancelled in a higher ratio than those bookings made for single travellers. People travelling for bussinesses use to travel alone, similarly to those doing it for visiting family or friends. The next cell shows it clearly. 86% of Bussiness and 80% of Visit labeled bookings were made for single travellers, whereas just 11% of leisure travellers were booking to fly alone. We excluded group labeled bookings for obvious reasons.</p>
-</li>
-<li><p>Regarding the different channels the bookings were made through, the cancelling ratio is much higher for those bookings not labeled as Retail, Corporate or Online travel agencys. We could suppose those bookings were made directly by the users with the airline or flight search engine, so that they were able to cancel it easier than those made through any kind of travel agency.</p>
-</li>
+<ul>
+<li>Regarding the different channels the bookings were made through, the cancelling ratio is much higher for those bookings not labeled as Retail, Corporate or Online travel agencys. We could suppose those bookings were made directly by the users with the airline or flight search engine, so that they were able to cancel it easier than those made through any kind of travel agency.</li>
 </ul>
 
 </div>
